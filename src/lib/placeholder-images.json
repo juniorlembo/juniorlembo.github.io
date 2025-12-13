@@ -1,0 +1,28 @@
+{
+  "placeholderImages": [
+    {
+      "id": "project-1",
+      "description": "A dashboard for monitoring network security.",
+      "imageUrl": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjeWJlciUyMHNlY3VyaXR5fGVufDB8fHx8MTc2NTYwNTQ4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cyber security"
+    },
+    {
+      "id": "project-2",
+      "description": "A vulnerability scanning tool.",
+      "imageUrl": "https://images.unsplash.com/photo-1562813733-b31f71025d54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb2RlJTIwdGVybWluYWx8ZW58MHx8fHwxNzY1NTM1MDIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "code terminal"
+    },
+    {
+      "id": "project-3",
+      "description": "An encrypted messaging application.",
+      "imageUrl": "https://images.unsplash.com/photo-1551650975-87deedd944c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2JpbGUlMjBhcHB8ZW58MHx8fHwxNzY1NTYzMzAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mobile app"
+    },
+    {
+      "id": "project-4",
+      "description": "Cloud infrastructure security audit.",
+      "imageUrl": "https://images.unsplash.com/photo-1700049596230-206afab85eac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2xvdWQlMjBuZXR3b3JrfGVufDB8fHx8MTc2NTYzMzc1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cloud network"
+    }
+  ]
+}
