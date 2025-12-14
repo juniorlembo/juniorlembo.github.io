@@ -8,9 +8,11 @@ import { Toaster } from '@/components/ui/toaster';
 import { ThemeProvider } from '@/components/theme-provider';
 import React, { useState, useEffect } from 'react';
 import { Loader } from '@/components/loader';
+// Defining icon
+import logo from "@/public/logo.ico"
 
 const metadata: Metadata = {
-  title: 'Alex Mercer',
+  title: 'Ilem LEMBO',
   description: 'Guardian of the Digital Realm.',
 };
 
@@ -38,6 +40,9 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
+        {/* Define site icon */}
+        <link rel="logo" type="image/x-icon" href={logo.src} />
+
         <link
           href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&display=swap"
           rel="stylesheet"

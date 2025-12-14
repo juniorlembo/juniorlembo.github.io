@@ -1,16 +1,17 @@
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Code, ShieldCheck, Bug, CloudCog, GitBranch, Shield, Server } from 'lucide-react';
+import { Code, ShieldCheck, Bug, CloudCog, GitBranch, Shield, Server, MonitorCheck } from 'lucide-react';
 
 const skillsData = {
-  languages: ['Python', 'Go', 'JavaScript', 'TypeScript', 'SQL', 'Bash'],
-  pentesting: ['Metasploit', 'Burp Suite', 'Nmap', 'Wireshark', 'Kali Linux'],
+  languages: ['Python', 'Go', 'JavaScript', 'TypeScript', 'SQL', 'Bash', 'Powershell',],
+  pentesting: ['Metasploit', 'Burp Suite', 'Nmap', 'Wireshark', 'Kali Linux', 'Ligolo-ng'],
   frameworks: ['React', 'Next.js', 'Node.js', 'Django', 'FastAPI'],
-  'cloud & devops': ['AWS', 'GCP', 'Azure', 'Docker', 'Kubernetes', 'Terraform', 'Ansible', 'Git'],
+  'cloud & devops': ['AWS', 'GCP', 'Azure', 'Docker', 'Digital Ocean', 'Contabo', 'Kubernetes', 'Terraform', 'Ansible', 'Git'],
   'threat modeling': ['STRIDE', 'DREAD', 'PASTA', 'Attack Trees'],
-  'av & security': ['CrowdStrike', 'Splunk', 'Suricata', 'OSSEC'],
-  'networking': ['TCP/IP', 'DNS', 'HTTP/S', 'BGP', 'VPNs', 'Firewalls'],
+  'av & security': ['CrowdStrike', 'Splunk', 'Suricata', 'OSSEC', 'Wazuh'],
+  'monitoring': ['Datadog', 'New Relic', 'Sentry', 'Grafana'],
+  'networking': ['TCP/IP', 'DNS', 'HTTP/S', 'BGP', 'VPNs', 'Firewalls', 'Fortinet', 'Cisco', 'Mikrotik'],
 };
 
 const skillCategories = [
@@ -20,6 +21,7 @@ const skillCategories = [
   { name: 'Cloud & DevOps', key: 'cloud & devops', icon: <CloudCog /> },
   { name: 'Threat Modeling', key: 'threat modeling', icon: <ShieldCheck /> },
   { name: 'AV & Security', key: 'av & security', icon: <Shield /> },
+  { name: 'Monitoring', key: 'monitoring', icon: <MonitorCheck /> },
   { name: 'Networking', key: 'networking', icon: <Server /> },
 ];
 

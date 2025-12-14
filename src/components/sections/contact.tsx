@@ -64,7 +64,7 @@ export function Contact() {
             </div>
           <div className="mx-auto w-full max-w-md">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4" netlify>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4" netlify="true">
               <FormField
                 control={form.control}
                 name="name"
