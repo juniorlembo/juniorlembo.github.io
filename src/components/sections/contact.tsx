@@ -46,7 +46,7 @@ export function Contact() {
                     <span className="text-primary mr-3">04.</span>Initiate Handshake
                 </h2>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
-                Currently looking for new opportunities in Network Security Architecture and Penetration Testing.
+                Currently looking for new freelance opportunities in the Web Development, DevSecOps Area, Network and Cloud Security, Penetration Testing.
                 </p>
                 <p className="max-w-[600px] text-muted-foreground md:text-base/relaxed">
                 Whether you have a question, a project proposal, or just want to connect, feel free to send a message. I'm always open to discussing new challenges and collaborations.
@@ -54,11 +54,18 @@ export function Contact() {
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <Mail className="w-5 h-5 text-primary" />
-                    <span className="font-code text-sm">alex.mercer@email.com</span>
+                    <span className="font-code text-sm">
+                      <a href="mailto:devlembojunior@gmail.com" className="hover:underline">
+                      devlembojunior@gmail.com
+                      </a>
+                    </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Phone className="w-5 h-5 text-primary" />
-                    <span className="font-code text-sm">+1 (555) 123-4567</span>
+                    <span className="font-code text-sm">
+                      <a href="tel:+22892419080" className="hover:underline">
+                      + (228) 92 41 90 80</a>
+                    </span>
                   </div>
                 </div>
             </div>

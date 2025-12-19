@@ -41,7 +41,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
         {/* Define site icon */}
-        <link rel="logo" type="image/x-icon" href={logo.src} />
+        <link rel="icon" type="image/x-icon" href={logo.src} />
 
         <link
           href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&display=swap"

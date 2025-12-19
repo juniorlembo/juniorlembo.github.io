@@ -3,35 +3,41 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Badge } from '@/components/ui/badge';
+import safeticket from '@/public/safeticket.png'
+import takaz from '@/public/takaz.png'
+import cetak from '@/public/cetak.png'
+import tesma from '@/public/tesma.png'
 
 const projects = [
   {
-    title: 'Enterprise Firewall Migration',
+    title: 'TAKAZ-Eng Website and Mail Security',
     description: 'Upgraded legacy firewall infrastructure to a next-generation solution for a Fortune 500 company, improving threat detection by 40%.',
-    image: PlaceHolderImages.find(p => p.id === 'project-1'),
-    tags: ['Firewall', 'Migration', 'Security'],
-    category: 'Network Security',
+    image: takaz,
+    tags: ['Firewall', 'Migration', 'Security', 'Pentesting', 'Mail services'],
+    category: 'Web Development and System hardening',
   },
   {
-    title: 'Zero Trust Implementation',
-    description: 'Designed and deployed a Zero Trust network architecture, reducing lateral movement and enforcing strict access controls.',
-    image: PlaceHolderImages.find(p => p.id === 'project-2'),
-    tags: ['Zero Trust', 'Architecture', 'IAM'],
+    title: 'TESMA Solar Website and Mail Security',
+    description: 'Developed a secure website and email infrastructure for TESMA Solar, implementing best practices in web and mail security.',
+    image: tesma,
+    tags: ['Site Vitrine', 'Architecture', 'Security', 'Mail services', 'Pentesting'],
     category: 'Architecture',
   },
   {
-    title: 'Financial Sector Pentest',
-    description: 'Conducted a comprehensive penetration test for a major bank, identifying critical vulnerabilities in their online banking platform.',
-    image: PlaceHolderImages.find(p => p.id === 'project-3'),
-    tags: ['Pentesting', 'Finance', 'WebApp'],
-    category: 'Offensive Security',
+    title: 'CETAK-Services Website and Mail Security',
+    description: 'Developed a secure website and email infrastructure for CETAK-Services, implementing best practices in web and mail security, while showcasing their service offerings effectively.',
+    //image: PlaceHolderImages.find(p => p.id === 'project-3'),
+    image: cetak,
+    tags: ['Pentesting', 'WebApp', 'Security', 'Mail services'],
+    category: 'Web Development and System hardening',
   },
   {
-    title: 'Cloud Security Orchestrator',
+    title: 'SafeTicket Backend and Infrastructure Security : DevSecOps Automation',
     description: 'Automated security auditing and compliance checks for multi-cloud environments (AWS, GCP).',
-    image: PlaceHolderImages.find(p => p.id === 'project-4'),
-    tags: ['Cloud', 'Automation', 'Compliance'],
-    category: 'Cloud Security',
+    // image: PlaceHolderImages.find(p => p.id === 'project-4'),
+    image: safeticket,
+    tags: ['Cloud', 'Automation', 'Compliance', 'DevSecOps', 'Infrastructure as Code', 'CI/CD'],
+    category: 'Cloud Security and DevSecOps',
   },
 ];
 
@@ -64,7 +70,7 @@ export function Projects() {
                       </CardHeader>
                       {project.image && (
                           <Image
-                            src={project.image.imageUrl}
+                            src={project.image}
                             alt={project.title}
                             width={600}
                             height={400}
