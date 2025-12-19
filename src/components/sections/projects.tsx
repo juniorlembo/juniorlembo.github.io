@@ -7,10 +7,31 @@ import safeticket from '@/public/safeticket.png'
 import takaz from '@/public/takaz.png'
 import cetak from '@/public/cetak.png'
 import tesma from '@/public/tesma.png'
+import great from '@/public/great.png'
 
 const projects = [
   {
+    title: 'SafeTicket Backend and Infrastructure Security : DevSecOps Automation',
+    description: 'Automated security auditing and compliance checks for multi-cloud environments (AWS, GCP).',
+    // image: PlaceHolderImages.find(p => p.id === 'project-4'),
+    url: "https://www.safeticket.app",
+    image: safeticket,
+    tags: ['Cloud', 'Automation', 'Compliance', 'DevSecOps', 'Infrastructure as Code', 'CI/CD'],
+    category: 'Cloud Security and DevSecOps',
+  },
+  {
+    title: 'Great Tech lab Website',
+    url : "https://greattechlab.tech",
+    description: 'A website showcasing the Enterprise ambition and Goals, and projects.',
+    // image: PlaceHolderImages.find(p => p.id === 'project-4'),
+    image: great,
+    tags: ['Cloud', 'Automation', 'Compliance', 'DevSecOps', 'Infrastructure as Code', 'CI/CD'],
+    category: 'Cloud Security and DevSecOps',
+  },
+  
+  {
     title: 'TAKAZ-Eng Website and Mail Security',
+    url: "https://www.takaz-eng.com",
     description: 'Upgraded legacy firewall infrastructure to a next-generation solution for a Fortune 500 company, improving threat detection by 40%.',
     image: takaz,
     tags: ['Firewall', 'Migration', 'Security', 'Pentesting', 'Mail services'],
@@ -18,6 +39,7 @@ const projects = [
   },
   {
     title: 'TESMA Solar Website and Mail Security',
+    url: "https://www.tesma-solar.com",
     description: 'Developed a secure website and email infrastructure for TESMA Solar, implementing best practices in web and mail security.',
     image: tesma,
     tags: ['Site Vitrine', 'Architecture', 'Security', 'Mail services', 'Pentesting'],
@@ -25,19 +47,12 @@ const projects = [
   },
   {
     title: 'CETAK-Services Website and Mail Security',
+    url: "https://www.cetak.services",
     description: 'Developed a secure website and email infrastructure for CETAK-Services, implementing best practices in web and mail security, while showcasing their service offerings effectively.',
     //image: PlaceHolderImages.find(p => p.id === 'project-3'),
     image: cetak,
     tags: ['Pentesting', 'WebApp', 'Security', 'Mail services'],
     category: 'Web Development and System hardening',
-  },
-  {
-    title: 'SafeTicket Backend and Infrastructure Security : DevSecOps Automation',
-    description: 'Automated security auditing and compliance checks for multi-cloud environments (AWS, GCP).',
-    // image: PlaceHolderImages.find(p => p.id === 'project-4'),
-    image: safeticket,
-    tags: ['Cloud', 'Automation', 'Compliance', 'DevSecOps', 'Infrastructure as Code', 'CI/CD'],
-    category: 'Cloud Security and DevSecOps',
   },
 ];
 
@@ -79,7 +94,11 @@ export function Projects() {
                           />
                         )}
                       <CardContent className="flex-grow pt-6">
-                        <CardTitle className="font-headline text-2xl">{project.title}</CardTitle>
+                        <CardTitle className="font-headline text-2xl">
+                          <a target='_blank' href={project.url}>
+                            {project.title}
+                          </a>
+                          </CardTitle>
                         <p className="text-sm text-muted-foreground mt-2">{project.description}</p>
                       </CardContent>
                        <CardFooter className="flex flex-wrap gap-2">

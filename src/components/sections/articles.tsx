@@ -5,7 +5,42 @@ import { articles } from '@/lib/articles';
 
 export function Articles() {
   return (
-    <section id="articles" className="w-full">
+    <section id="articles" className="w-full py-12 md:py-24 lg:py-32">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex flex-col items-center justify-center text-center space-y-8">
+          <div className="space-y-4">
+            <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl">
+              <span className="text-primary mr-3">03.</span>Articles
+            </h2>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="max-w-2xl space-y-6">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-lg blur-xl"></div>
+              <Card className="relative bg-card/50 backdrop-blur-sm border border-primary/20 shadow-xl">
+                <CardContent className="p-8 md:p-12">
+                  <div className="space-y-4">
+                    <div className="text-6xl md:text-8xl font-bold font-headline text-primary/30 select-none">
+                      Coming Soon
+                    </div>
+                    <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                      I'm currently working on exciting articles about DevSecOps Practices, Monitoring, Networking, and technology.
+                      Stay tuned for in-depth insights and practical guides.
+                    </p>
+                    <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
+                      <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                      <span>In Development</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div className="space-y-2">
@@ -37,7 +72,7 @@ export function Articles() {
             </Card>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
