@@ -5,6 +5,7 @@ import { Projects } from '@/components/sections/projects';
 import { Articles } from '@/components/sections/articles';
 import { Contact } from '@/components/sections/contact';
 import { SecureChannel } from '@/components/sections/secure-channel';
+import { Certifications } from '@/components/sections/certifications';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <SecureChannel />
       <Stats />
       <Skills />
+      <Certifications />
       <Projects />
       <Articles />
       <Contact />
