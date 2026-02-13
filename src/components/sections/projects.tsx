@@ -14,72 +14,72 @@ import azure from '@/public/azure.png'
 
 const projects = [
   {
-    title: 'Azure Cloud Cost Optimization & FinOps Implementation',
-    description: 'Comprehensive Azure cloud cost optimization strategy achieving up to 70% reduction in infrastructure billing through resource rightsizing, reserved instances, spot instances, and automated cost governance policies.',
+    title: 'Optimisation des Coûts Cloud Azure & Implémentation FinOps',
+    description: 'Stratégie complète d\'optimisation des coûts cloud Azure permettant jusqu\'à 70% de réduction des factures d\'infrastructure grâce au dimensionnement des ressources, aux instances réservées, aux instances spot et aux politiques automatisées de gouvernance des coûts.',
     url: "https://azure.microsoft.com",
     image: azure,
-    tags: ['Azure', 'FinOps', 'Cost Optimization', 'Resource Management', 'Cloud Governance', 'Billing Analytics'],
-    category: 'Cloud Cost Management',
+    tags: ['Azure', 'FinOps', 'Optimisation Coûts', 'Gestion Ressources', 'Gouvernance Cloud', 'Analyse Facturation'],
+    category: 'Gestion des Coûts Cloud',
   },
   {
-    title: 'Enterprise Monitoring & Observability Platform : Datadog',
-    description: 'Implementation of Datadog, a commercial SaaS monitoring platform, providing unified observability across infrastructure, applications, and logs with AI-powered insights and automated alerting.',
+    title: 'Plateforme de Surveillance & Observabilité d\'Entreprise : Datadog',
+    description: 'Implémentation de Datadog, une plateforme SaaS de surveillance commerciale, offrant une observabilité unifiée de l\'infrastructure, des applications et des logs avec des insights alimentés par l\'IA et des alertes automatisées.',
     url: "https://www.safeticket.app",
     image: datadog,
-    tags: ['Datadog', 'SaaS', 'APM', 'Infrastructure Monitoring', 'Log Management', 'AI Insights'],
-    category: 'Monitoring & Compliance',
+    tags: ['Datadog', 'SaaS', 'APM', 'Surveillance Infrastructure', 'Gestion Logs', 'Insights IA'],
+    category: 'Surveillance & Conformité',
   },
   {
-    title: 'Enterprise Monitoring & Observability Platform : Grafana to optimize costs',
-    description: 'Comprehensive monitoring solution using Grafana, Prometheus, Loki, and Mimir for real-time server and application observability with GDPR-compliant log sanitization and PII protection.',
+    title: 'Plateforme de Surveillance & Observabilité d\'Entreprise : Grafana pour optimiser les coûts',
+    description: 'Solution de surveillance complète utilisant Grafana, Prometheus, Loki et Mimir pour l\'observabilité en temps réel des serveurs et applications avec sanitisation des logs conforme RGPD et protection des données personnelles.',
     url: "https://www.safeticket.app",
     image: grafana,
-    tags: ['Grafana', 'Prometheus', 'Loki', 'Mimir', 'GDPR', 'PII Protection', 'Observability'],
-    category: 'Monitoring & Compliance',
+    tags: ['Grafana', 'Prometheus', 'Loki', 'Mimir', 'RGPD', 'Protection DCP', 'Observabilité'],
+    category: 'Surveillance & Conformité',
   },
   {
-    title: 'SafeTicket Backend and Infrastructure Security : DevSecOps Automation',
-    description: 'Automated security auditing and compliance checks for multi-cloud environments (AWS, GCP).',
+    title: 'Sécurité Backend et Infrastructure SafeTicket : Automation DevSecOps',
+    description: 'Audit de sécurité automatisé et vérifications de conformité pour environnements multi-cloud (AWS, GCP).',
     // image: PlaceHolderImages.find(p => p.id === 'project-4'),
     url: "https://www.safeticket.app",
     image: safeticket,
-    tags: ['Cloud', 'Automation', 'Compliance', 'DevSecOps', 'Infrastructure as Code', 'CI/CD'],
-    category: 'Cloud Security and DevSecOps',
+    tags: ['Cloud', 'Automation', 'Conformité', 'DevSecOps', 'Infrastructure as Code', 'CI/CD'],
+    category: 'Sécurité Cloud et DevSecOps',
   },
   {
-    title: 'Great Tech lab Website',
+    title: 'Site Web Great Tech Lab',
     url : "https://greattechlab.tech",
-    description: 'A website showcasing the Enterprise ambition and Goals, and projects.',
+    description: 'Un site web présentant l\'ambition, les objectifs et les projets de l\'entreprise.',
     // image: PlaceHolderImages.find(p => p.id === 'project-4'),
     image: great,
-    tags: ['Cloud', 'Automation', 'Compliance', 'DevSecOps', 'Infrastructure as Code', 'CI/CD'],
-    category: 'Cloud Security and DevSecOps',
+    tags: ['Cloud', 'Automation', 'Conformité', 'DevSecOps', 'Infrastructure as Code', 'CI/CD'],
+    category: 'Sécurité Cloud et DevSecOps',
   },
   
   {
-    title: 'TAKAZ-Eng Website and Mail Security',
+    title: 'Site Web TAKAZ-Eng et Sécurité Mail',
     url: "https://www.takaz-eng.com",
-    description: 'Upgraded legacy firewall infrastructure to a next-generation solution for a Fortune 500 company, improving threat detection by 40%.',
+    description: 'Mise à niveau de l\'infrastructure pare-feu legacy vers une solution de nouvelle génération pour une entreprise Fortune 500, améliorant la détection des menaces de 40%.',
     image: takaz,
-    tags: ['Firewall', 'Migration', 'Security', 'Pentesting', 'Mail services'],
-    category: 'Web Development and System hardening',
+    tags: ['Pare-feu', 'Migration', 'Sécurité', 'Pentesting', 'Services Mail'],
+    category: 'Développement Web et Durcissement Système',
   },
   {
-    title: 'TESMA Solar Website and Mail Security',
+    title: 'Site Web TESMA Solar et Sécurité Mail',
     url: "https://www.tesma-solar.com",
-    description: 'Developed a secure website and email infrastructure for TESMA Solar, implementing best practices in web and mail security.',
+    description: 'Développement d\'un site web sécurisé et d\'une infrastructure email pour TESMA Solar, implémentant les meilleures pratiques en sécurité web et mail.',
     image: tesma,
-    tags: ['Site Vitrine', 'Architecture', 'Security', 'Mail services', 'Pentesting'],
+    tags: ['Site Vitrine', 'Architecture', 'Sécurité', 'Services Mail', 'Pentesting'],
     category: 'Architecture',
   },
   {
-    title: 'CETAK-Services Website and Mail Security',
+    title: 'Site Web CETAK-Services et Sécurité Mail',
     url: "https://www.cetak.services",
-    description: 'Developed a secure website and email infrastructure for CETAK-Services, implementing best practices in web and mail security, while showcasing their service offerings effectively.',
+    description: 'Développement d\'un site web sécurisé et d\'une infrastructure email pour CETAK-Services, implémentant les meilleures pratiques en sécurité web et mail, tout en présentant efficacement leurs offres de services.',
     //image: PlaceHolderImages.find(p => p.id === 'project-3'),
     image: cetak,
-    tags: ['Pentesting', 'WebApp', 'Security', 'Mail services'],
-    category: 'Web Development and System hardening',
+    tags: ['Pentesting', 'WebApp', 'Sécurité', 'Services Mail'],
+    category: 'Développement Web et Durcissement Système',
   },
 ];
 
@@ -90,10 +90,10 @@ export function Projects() {
         <div className="flex flex-col items-start justify-center space-y-4">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl">
-              <span className="text-primary mr-3">02.</span>Recent Projects
+              <span className="text-primary mr-3">02.</span>Projets Récents
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              A selection of projects demonstrating expertise in offensive and defensive security domains.
+              Une sélection de projets démontrant une expertise en sécurité offensive et défensive.
             </p>
           </div>
         </div>

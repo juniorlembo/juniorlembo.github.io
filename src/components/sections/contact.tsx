@@ -11,9 +11,9 @@ import { useToast } from '@/hooks/use-toast';
 import { Mail, Phone } from 'lucide-react';
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
-  email: z.string().email({ message: 'Please enter a valid email.' }),
-  message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
+  name: z.string().min(2, { message: 'Le nom doit contenir au moins 2 caractères.' }),
+  email: z.string().email({ message: 'Veuillez entrer un email valide.' }),
+  message: z.string().min(10, { message: 'Le message doit contenir au moins 10 caractères.' }),
 });
 
 export function Contact() {
@@ -31,8 +31,8 @@ export function Contact() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
     toast({
-      title: 'Message Sent!',
-      description: 'Thank you for reaching out. I will get back to you shortly.',
+      title: 'Message Envoyé!',
+      description: 'Merci de m\'avoir contacté. Je vous répondrai dans les plus brefs délais.',
     });
     form.reset();
   }
@@ -43,13 +43,13 @@ export function Contact() {
         <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
                 <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl">
-                    <span className="text-primary mr-3">04.</span>Initiate Handshake
+                    <span className="text-primary mr-3">04.</span>Initier la Communication
                 </h2>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
-                Currently looking for new freelance opportunities in the Web Development, DevSecOps Area, Network and Cloud Security, Penetration Testing.
+                Actuellement à la recherche de nouvelles opportunités freelance dans le Développement Web, le DevSecOps, la Sécurité Réseau et Cloud, les Tests d'Intrusion.
                 </p>
                 <p className="max-w-[600px] text-muted-foreground md:text-base/relaxed">
-                Whether you have a question, a project proposal, or just want to connect, feel free to send a message. I'm always open to discussing new challenges and collaborations.
+                Que vous ayez une question, une proposition de projet, ou que vous souhaitiez simplement échanger, n'hésitez pas à m'envoyer un message. Je suis toujours ouvert à discuter de nouveaux défis et collaborations.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
@@ -77,9 +77,9 @@ export function Contact() {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="font-code uppercase text-xs">Name</FormLabel>
+                    <FormLabel className="font-code uppercase text-xs">Nom</FormLabel>
                     <FormControl>
-                      <Input placeholder="Your Name" {...field} className="bg-input border-border/50" />
+                      <Input placeholder="Votre Nom" {...field} className="bg-input border-border/50" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -92,7 +92,7 @@ export function Contact() {
                   <FormItem>
                     <FormLabel className="font-code uppercase text-xs">Email</FormLabel>
                     <FormControl>
-                      <Input type="email" placeholder="Your Email" {...field} className="bg-input border-border/50" />
+                      <Input type="email" placeholder="Votre Email" {...field} className="bg-input border-border/50" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -105,13 +105,13 @@ export function Contact() {
                   <FormItem>
                     <FormLabel className="font-code uppercase text-xs">Message</FormLabel>
                     <FormControl>
-                      <Textarea placeholder="Your message..." className="min-h-[120px] bg-input border-border/50" {...field} />
+                      <Textarea placeholder="Votre message..." className="min-h-[120px] bg-input border-border/50" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
-              <Button type="submit" size="lg" className="w-full font-bold bg-primary text-primary-foreground hover:bg-primary/90">Send Encrypted Message</Button>
+              <Button type="submit" size="lg" className="w-full font-bold bg-primary text-primary-foreground hover:bg-primary/90">Envoyer Message Crypté</Button>
             </form>
           </Form>
         </div>

@@ -15,14 +15,14 @@ const skillsData = {
 };
 
 const skillCategories = [
-  { name: 'Languages', key: 'languages', icon: <Code /> },
-  { name: 'Pentesting', key: 'pentesting', icon: <Bug /> },
+  { name: 'Langages', key: 'languages', icon: <Code /> },
+  { name: 'Tests d\'Intrusion', key: 'pentesting', icon: <Bug /> },
   { name: 'Frameworks', key: 'frameworks', icon: <GitBranch /> },
   { name: 'Cloud & DevOps', key: 'cloud & devops', icon: <CloudCog /> },
-  { name: 'Threat Modeling', key: 'threat modeling', icon: <ShieldCheck /> },
-  { name: 'AV & Security', key: 'av & security', icon: <Shield /> },
-  { name: 'Monitoring', key: 'monitoring', icon: <MonitorCheck /> },
-  { name: 'Networking', key: 'networking', icon: <Server /> },
+  { name: 'Modélisation Menaces', key: 'threat modeling', icon: <ShieldCheck /> },
+  { name: 'AV & Sécurité', key: 'av & security', icon: <Shield /> },
+  { name: 'Surveillance', key: 'monitoring', icon: <MonitorCheck /> },
+  { name: 'Réseaux', key: 'networking', icon: <Server /> },
 ];
 
 export function Skills() {
@@ -31,10 +31,10 @@ export function Skills() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="space-y-2">
           <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl">
-            <span className="text-primary mr-3">01.</span>Technical Arsenal
+            <span className="text-primary mr-3">01.</span>Arsenal Technique
           </h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Technologies, languages, and tools I use to build and secure systems.
+            Technologies, langages et outils que j'utilise pour construire et sécuriser les systèmes.
           </p>
         </div>
         
