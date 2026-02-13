@@ -8,8 +8,35 @@ import takaz from '@/public/takaz.png'
 import cetak from '@/public/cetak.png'
 import tesma from '@/public/tesma.png'
 import great from '@/public/great.png'
+import grafana from '@/public/grafana.png'
+import datadog from '@/public/datadog.png'
+import azure from '@/public/azure.png'
 
 const projects = [
+  {
+    title: 'Azure Cloud Cost Optimization & FinOps Implementation',
+    description: 'Comprehensive Azure cloud cost optimization strategy achieving up to 70% reduction in infrastructure billing through resource rightsizing, reserved instances, spot instances, and automated cost governance policies.',
+    url: "https://azure.microsoft.com",
+    image: azure,
+    tags: ['Azure', 'FinOps', 'Cost Optimization', 'Resource Management', 'Cloud Governance', 'Billing Analytics'],
+    category: 'Cloud Cost Management',
+  },
+  {
+    title: 'Enterprise Monitoring & Observability Platform : Datadog',
+    description: 'Implementation of Datadog, a commercial SaaS monitoring platform, providing unified observability across infrastructure, applications, and logs with AI-powered insights and automated alerting.',
+    url: "https://www.safeticket.app",
+    image: datadog,
+    tags: ['Datadog', 'SaaS', 'APM', 'Infrastructure Monitoring', 'Log Management', 'AI Insights'],
+    category: 'Monitoring & Compliance',
+  },
+  {
+    title: 'Enterprise Monitoring & Observability Platform : Grafana to optimize costs',
+    description: 'Comprehensive monitoring solution using Grafana, Prometheus, Loki, and Mimir for real-time server and application observability with GDPR-compliant log sanitization and PII protection.',
+    url: "https://www.safeticket.app",
+    image: grafana,
+    tags: ['Grafana', 'Prometheus', 'Loki', 'Mimir', 'GDPR', 'PII Protection', 'Observability'],
+    category: 'Monitoring & Compliance',
+  },
   {
     title: 'SafeTicket Backend and Infrastructure Security : DevSecOps Automation',
     description: 'Automated security auditing and compliance checks for multi-cloud environments (AWS, GCP).',
