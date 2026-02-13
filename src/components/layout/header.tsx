@@ -34,7 +34,7 @@ const navLinks = [
 ];
 import logo from '@/public/logo.gif';
 import Image from 'next/image';
-
+import LanguageSelector from '@/components/LanguageSelector';
 function CVPDFView() {
     const pdfUrl = "/cv.pdf";
     return (
@@ -178,6 +178,7 @@ export function Header() {
             </SheetContent>
           </Sheet>
         </div>
+        <LanguageSelector />
       </div>
     </header>
   );
