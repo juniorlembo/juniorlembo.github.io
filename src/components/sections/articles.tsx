@@ -22,15 +22,15 @@ export function Articles() {
                 <CardContent className="p-8 md:p-12">
                   <div className="space-y-4">
                     <div className="text-6xl md:text-8xl font-bold font-headline text-primary/30 select-none">
-                      Coming Soon
+                      Bientôt Disponible
                     </div>
                     <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                      I'm currently working on exciting articles about DevSecOps Practices, Monitoring, Networking, and technology.
-                      Stay tuned for in-depth insights and practical guides.
+                      Je travaille actuellement sur des articles passionnants concernant les pratiques DevSecOps, la surveillance, les réseaux et la technologie.
+                      Restez à l'écoute pour des analyses approfondies et des guides pratiques.
                     </p>
                     <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
                       <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                      <span>In Development</span>
+                      <span>En Développement</span>
                     </div>
                   </div>
                 </CardContent>
