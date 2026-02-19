@@ -8,7 +8,7 @@ import picture from '@/public/picture.png';
 
 export function Hero() {
   return (
-    <section id="home" className="w-full pt-24 md:pt-4">
+    <section id="home" className="w-full pt-28 md:pt-7">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center text-center space-y-8">
           <div className='w-100 h-50 rounded-full overflow-hidden shadow-lg border-4 border-primary'>
