@@ -19,7 +19,7 @@ export function Footer() {
           {/* <Link href="#" aria-label="Twitter">
             <Twitter className="h-6 w-6 text-muted-foreground transition-colors hover:text-primary" />
           </Link> */}
-          <Link href="https://www.linkedin.com/in/ilemjuniorlembo/" about='Ilem LEMBO LinkedIn Profile' aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.linkedin.com/in/ilemjuniorlembo/" about='Ilem LEMBO LinkedIn Profile'  aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
             <Linkedin className="h-6 w-6 text-muted-foreground transition-colors hover:text-primary" />
           </Link>
         </div>
