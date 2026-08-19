@@ -16,10 +16,10 @@ export function Hero() {
               Disponible pour freelance & nouvelles opportunités
             </Badge>
             <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-              Ilem Isaiah Nelson Junior LEMBO
+              Ilem Nelson Jr LEMBO
             </h1>
             <p className="text-2xl text-muted-foreground">
-              — Spécialiste Support Système & Cloud
+              — Spécialiste Système & Cloud | Architecte DevSecOps
             </p>
             <p className="max-w-[600px] text-muted-foreground">
             Spécialiste Système & Cloud certifié (LFCSA, KCNA, Security+), je fiabilise les infrastructures hybrides (VMware, Azure/AWS) et automatise leur exploitation dans le respect de SLA exigeants (99,8% de disponibilité). Auteur d'outils Open Source sur PyPI et lauréat du CTF Togo 2024, j'associe rigueur opérationnelle, optimisation des coûts et accompagnement des équipes vers la sécurité continue.
