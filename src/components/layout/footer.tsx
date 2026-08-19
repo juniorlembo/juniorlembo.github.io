@@ -3,7 +3,7 @@ import { Github, Twitter, Linkedin } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/20 bg-transparent mt-24">
+    <footer className="border-t border-border/20 bg-transparent mt-10">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 py-8 px-4 md:px-6">
         <div className='text-center md:text-left'>
           <p className="font-headline text-lg font-bold">Ilem LEMBO</p>

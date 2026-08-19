@@ -1,120 +1,80 @@
-'use client';
-
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import * as z from 'zod';
-import { Button } from '@/components/ui/button';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
-import { Mail, Phone } from 'lucide-react';
-
-const formSchema = z.object({
-  name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
-  email: z.string().email({ message: 'Please enter a valid email.' }),
-  message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
-});
+import { Card, CardContent } from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Mail, Phone, Globe } from "lucide-react";
+import Link from "next/link";
 
 export function Contact() {
-  const { toast } = useToast();
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: '',
-      email: '',
-      message: '',
-    },
-  });
-
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: 'Message Sent!',
-      description: 'Thank you for reaching out. I will get back to you shortly.',
-    });
-    form.reset();
-  }
-
   return (
-    <section id="contact" className="w-full pb-12">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6">
-                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl">
-                    <span className="text-primary mr-3">04.</span>Initiate Handshake
-                </h2>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
-                Currently looking for new freelance opportunities in the Web Development, DevSecOps Area, Network and Cloud Security, Penetration Testing.
-                </p>
-                <p className="max-w-[600px] text-muted-foreground md:text-base/relaxed">
-                Whether you have a question, a project proposal, or just want to connect, feel free to send a message. I'm always open to discussing new challenges and collaborations.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <Mail className="w-5 h-5 text-primary" />
-                    <span className="font-code text-sm">
-                      <a href="mailto:devlembojunior@gmail.com" className="hover:underline">
-                      devlembojunior@gmail.com
-                      </a>
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Phone className="w-5 h-5 text-primary" />
-                    <span className="font-code text-sm">
-                      <a href="tel:+22892419080" className="hover:underline">
-                      + (228) 92 41 90 80</a>
-                    </span>
-                  </div>
-                </div>
+    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-[#1a202c]">
+      <div className="container px-4 md:px-6">
+        <div className="grid gap-10 sm:grid-cols-2 items-start">
+          <div className="space-y-6">
+            <div className="inline-block rounded-lg bg-gray-800 px-3 py-1 text-sm">
+              Contact
             </div>
-          <div className="mx-auto w-full max-w-md">
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4" netlify="true">
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="font-code uppercase text-xs">Name</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Your Name" {...field} className="bg-input border-border/50" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="font-code uppercase text-xs">Email</FormLabel>
-                    <FormControl>
-                      <Input type="email" placeholder="Your Email" {...field} className="bg-input border-border/50" />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="message"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="font-code uppercase text-xs">Message</FormLabel>
-                    <FormControl>
-                      <Textarea placeholder="Your message..." className="min-h-[120px] bg-input border-border/50" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <Button type="submit" size="lg" className="w-full font-bold bg-primary text-primary-foreground hover:bg-primary/90">Send Encrypted Message</Button>
-            </form>
-          </Form>
-        </div>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">
+              Me Contacter
+            </h2>
+            <p className="max-w-[600px] text-gray-400">
+              Je suis toujours ouvert à la discussion de nouveaux projets, d'idées créatives ou d'opportunités de faire partie d'une vision ambitieuse.
+            </p>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <Mail className="h-5 w-5 text-green-400" />
+                <a href="mailto:devlembojunior@gmail.com" className="text-gray-300 hover:text-white">
+                  devlembojunior@gmail.com
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="h-5 w-5 text-green-400" />
+                <span className="text-gray-300">+228 92419080</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Globe className="h-5 w-5 text-green-400" />
+                <Link href="https://ilemlembo.me" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
+                  ilemlembo.me
+                </Link>
+              </div>
+            </div>
+            <div className="flex gap-4 pt-4">
+              <Link href="https://github.com/IlemLembo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <Github className="h-7 w-7 text-gray-400 hover:text-white transition-colors" />
+              </Link>
+              <Link href="https://www.linkedin.com/in/ilemjuniorlembo" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <Linkedin className="h-7 w-7 text-gray-400 hover:text-white transition-colors" />
+              </Link>
+            </div>
+          </div>
+          <div className="space-y-4">
+            <Card className="bg-gray-900 border-gray-800">
+              <CardContent className="p-6">
+                <form className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="first-name" className="text-gray-400">Prénom</Label>
+                      <Input id="first-name" placeholder="John" className="bg-gray-800 border-gray-700 text-white" />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="last-name" className="text-gray-400">Nom</Label>
+                      <Input id="last-name" placeholder="Doe" className="bg-gray-800 border-gray-700 text-white" />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="email" className="text-gray-400">Email</Label>
+                    <Input id="email" type="email" placeholder="john.doe@example.com" className="bg-gray-800 border-gray-700 text-white" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="message" className="text-gray-400">Message</Label>
+                    <Textarea id="message" placeholder="Votre message..." rows={4} className="bg-gray-800 border-gray-700 text-white" />
+                  </div>
+                  <Button type="submit" className="w-full bg-green-500 hover:bg-green-600 text-white">Envoyer le Message</Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </section>

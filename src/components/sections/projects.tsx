@@ -1,147 +1,202 @@
-import Image from 'next/image';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Badge } from '@/components/ui/badge';
-import safeticket from '@/public/safeticket.png'
-import takaz from '@/public/takaz.png'
-import cetak from '@/public/cetak.png'
-import tesma from '@/public/tesma.png'
-import great from '@/public/great.png'
-import grafana from '@/public/grafana.png'
-import datadog from '@/public/datadog.png'
-import azure from '@/public/azure.png'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Code, Github } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
-const projects = [
+// Open Source Projects
+const openSourceProjects = [
   {
-    title: 'Azure Cloud Cost Optimization & FinOps Implementation',
-    description: 'Comprehensive Azure cloud cost optimization strategy achieving up to 70% reduction in infrastructure billing through resource rightsizing, reserved instances, spot instances, and automated cost governance policies.',
-    url: "https://azure.microsoft.com",
-    image: azure,
-    tags: ['Azure', 'FinOps', 'Cost Optimization', 'Resource Management', 'Cloud Governance', 'Billing Analytics'],
-    category: 'Cloud Cost Management',
+    icon: <Code size={20} className="text-green-400" />,
+    title: 'loki_middleware',
+    description: 'Un outil pour faciliter la collecte et l\'agrégation des logs pour les développeurs ou les administrateurs système.',
+    tags: ['Python', 'FastAPI', 'Loki'],
+    links: [
+      { type: 'github', url: 'https://github.com/IlemLembo/loki-middleware' },
+    ]
   },
   {
-    title: 'Enterprise Monitoring & Observability Platform : Datadog',
-    description: 'Implementation of Datadog, a commercial SaaS monitoring platform, providing unified observability across infrastructure, applications, and logs with AI-powered insights and automated alerting.',
-    url: "https://www.safeticket.app",
-    image: datadog,
-    tags: ['Datadog', 'SaaS', 'APM', 'Infrastructure Monitoring', 'Log Management', 'AI Insights'],
-    category: 'Monitoring & Compliance',
+    icon: <Code size={20} className="text-blue-400" />,
+    title: 'Automatisation de la Sauvegarde de VMware ESXI',
+    description: 'Script Bash/Python pour automatiser les snapshots et les restaurations à chaud pour les hyperviseurs VMware ESXi.',
+    tags: ['Bash', 'Python', 'VMware'],
+    links: [
+      { type: 'github', url: '#' },
+    ]
   },
-  {
-    title: 'Enterprise Monitoring & Observability Platform : Grafana to optimize costs',
-    description: 'Comprehensive monitoring solution using Grafana, Prometheus, Loki, and Mimir for real-time server and application observability with GDPR-compliant log sanitization and PII protection.',
-    url: "https://www.safeticket.app",
-    image: grafana,
-    tags: ['Grafana', 'Prometheus', 'Loki', 'Mimir', 'GDPR', 'PII Protection', 'Observability'],
-    category: 'Monitoring & Compliance',
-  },
-  {
-    title: 'SafeTicket Backend and Infrastructure Security : DevSecOps Automation',
-    description: 'Automated security auditing and compliance checks for multi-cloud environments (AWS, GCP).',
-    // image: PlaceHolderImages.find(p => p.id === 'project-4'),
-    url: "https://www.safeticket.app",
-    image: safeticket,
-    tags: ['Cloud', 'Automation', 'Compliance', 'DevSecOps', 'Infrastructure as Code', 'CI/CD'],
-    category: 'Cloud Security and DevSecOps',
-  },
-  {
-    title: 'Great Tech lab Website',
-    url : "https://greattechlab.tech",
-    description: 'A website showcasing the Enterprise ambition and Goals, and projects.',
-    // image: PlaceHolderImages.find(p => p.id === 'project-4'),
-    image: great,
-    tags: ['Cloud', 'Automation', 'Compliance', 'DevSecOps', 'Infrastructure as Code', 'CI/CD'],
-    category: 'Cloud Security and DevSecOps',
-  },
-  
-  {
-    title: 'TAKAZ-Eng Website and Mail Security',
-    url: "https://www.takaz-eng.com",
-    description: 'Upgraded legacy firewall infrastructure to a next-generation solution for a Fortune 500 company, improving threat detection by 40%.',
-    image: takaz,
-    tags: ['Firewall', 'Migration', 'Security', 'Pentesting', 'Mail services'],
-    category: 'Web Development and System hardening',
-  },
-  {
-    title: 'TESMA Solar Website and Mail Security',
-    url: "https://www.tesma-solar.com",
-    description: 'Developed a secure website and email infrastructure for TESMA Solar, implementing best practices in web and mail security.',
-    image: tesma,
-    tags: ['Site Vitrine', 'Architecture', 'Security', 'Mail services', 'Pentesting'],
-    category: 'Architecture',
-  },
-  {
-    title: 'CETAK-Services Website and Mail Security',
-    url: "https://www.cetak.services",
-    description: 'Developed a secure website and email infrastructure for CETAK-Services, implementing best practices in web and mail security, while showcasing their service offerings effectively.',
-    //image: PlaceHolderImages.find(p => p.id === 'project-3'),
-    image: cetak,
-    tags: ['Pentesting', 'WebApp', 'Security', 'Mail services'],
-    category: 'Web Development and System hardening',
-  },
+];
+
+// Image imports for Featured Projects
+import azure from "@/public/azure.png";
+import datadog from "@/public/datadog.png";
+import grafana from "@/public/grafana.png";
+import safeticket from "@/public/safeticket.png";
+import great from "@/public/great.png";
+import takaz from "@/public/takaz.png";
+import tesma from "@/public/tesma.png";
+import cetak from "@/public/cetak.png";
+
+const featuredProjects = [
+    {
+        title: 'Optimisation des Coûts Cloud Azure & Implémentation FinOps',
+        description: 'Stratégie complète d\'optimisation des coûts cloud Azure permettant jusqu\'à 70% de réduction des factures d\'infrastructure grâce au dimensionnement des ressources, aux instances réservées, aux instances spot et aux politiques automatisées de gouvernance des coûts.',
+        url: "https://azure.microsoft.com",
+        image: azure,
+        tags: ['Azure', 'FinOps', 'Optimisation Coûts', 'Gestion Ressources', 'Gouvernance Cloud', 'Analyse Facturation'],
+        category: 'Gestion des Coûts Cloud',
+      },
+      {
+        title: 'Plateforme de Surveillance & Observabilité d\'Entreprise : Datadog',
+        description: 'Implémentation de Datadog, une plateforme SaaS de surveillance commerciale, offrant une observabilité unifiée de l\'infrastructure, des applications et des logs avec des insights alimentés par l\'IA et des alertes automatisées.',
+        url: "https://www.safeticket.app",
+        image: datadog,
+        tags: ['Datadog', 'SaaS', 'APM', 'Surveillance Infrastructure', 'Gestion Logs', 'Insights IA'],
+        category: 'Surveillance & Conformité',
+      },
+      {
+        title: 'Plateforme de Surveillance & Observabilité d\'Entreprise : Grafana pour optimiser les coûts',
+        description: 'Solution de surveillance complète utilisant Grafana, Prometheus, Loki et Mimir pour l\'observabilité en temps réel des serveurs et applications avec sanitisation des logs conforme RGPD et protection des données personnelles.',
+        url: "https://www.safeticket.app",
+        image: grafana,
+        tags: ['Grafana', 'Prometheus', 'Loki', 'Mimir', 'RGPD', 'Protection DCP', 'Observabilité'],
+        category: 'Surveillance & Conformité',
+      },
+      {
+        title: 'Sécurité Backend et Infrastructure SafeTicket : Automation DevSecOps',
+        description: 'Audit de sécurité automatisé et vérifications de conformité pour environnements multi-cloud (AWS, GCP).',
+        url: "https://www.safeticket.app",
+        image: safeticket,
+        tags: ['Cloud', 'Automation', 'Conformité', 'DevSecOps', 'Infrastructure as Code', 'CI/CD'],
+        category: 'Sécurité Cloud et DevSecOps',
+      },
+      {
+        title: 'Site Web Great Tech Lab',
+        url : "https://greattechlab.tech",
+        description: 'Un site web présentant l\'ambition, les objectifs et les projets de l\'entreprise.',
+        image: great,
+        tags: ['Cloud', 'Automation', 'Conformité', 'DevSecOps', 'Infrastructure as Code', 'CI/CD'],
+        category: 'Sécurité Cloud et DevSecOps',
+      },
+      
+      {
+        title: 'Site Web TAKAZ-Eng et Sécurité Mail',
+        url: "https://www.takaz-eng.com",
+        description: 'Mise à niveau de l\'infrastructure pare-feu legacy vers une solution de nouvelle génération pour une entreprise Fortune 500, améliorant la détection des menaces de 40%.',
+        image: takaz,
+        tags: ['Pare-feu', 'Migration', 'Sécurité', 'Pentesting', 'Services Mail'],
+        category: 'Développement Web et Durcissement Système',
+      },
+      {
+        title: 'Site Web TESMA Solar et Sécurité Mail',
+        url: "https://www.tesma-solar.com",
+        description: 'Développement d\'un site web sécurisé et d\'une infrastructure email pour TESMA Solar, implémentant les meilleures pratiques en sécurité web et mail.',
+        image: tesma,
+        tags: ['Site Vitrine', 'Architecture', 'Sécurité', 'Services Mail', 'Pentesting'],
+        category: 'Architecture',
+      },
+      {
+        title: 'Site Web CETAK-Services et Sécurité Mail',
+        url: "https://www.cetak.services",
+        description: 'Développement d\'un site web sécurisé et d\'une infrastructure email pour CETAK-Services, implémentant les meilleures pratiques en sécurité web et mail, tout en présentant efficacement leurs offres de services.',
+        image: cetak,
+        tags: ['Pentesting', 'WebApp', 'Sécurité', 'Services Mail'],
+        category: 'Développement Web et Durcissement Système',
+      },
 ];
 
 export function Projects() {
   return (
-    <section id="projects" className="w-full">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-start justify-center space-y-4">
+    <section id="projects" className="w-full py-12 md:py-24 lg:py-32">
+      <div className="container px-4 md:px-6">
+
+        {/* Open Source Contributions */}
+        <div className="flex flex-col items-center justify-center space-y-4 text-center mt-16">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl">
-              <span className="text-primary mr-3">02.</span>Recent Projects
+            <div className="inline-block rounded-lg bg-gray-800 px-3 py-1 text-sm">
+              Open Source
+            </div>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+              Contributions
             </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              A selection of projects demonstrating expertise in offensive and defensive security domains.
+            <p className="max-w-[900px] text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Une sélection de mes projets open-source.
             </p>
           </div>
         </div>
-        <div className="py-12">
-          <Carousel 
-            opts={{ align: "start", loop: true }} 
-            className="w-full"
-          >
-            <CarouselContent className="-ml-4">
-              {projects.map((project, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <div className="h-full">
-                    <Card className="h-full flex flex-col overflow-hidden bg-card border-border/50 transition-all hover:border-primary/50">
-                       <CardHeader>
-                        <CardDescription className="text-primary font-code uppercase tracking-widest">{project.category}</CardDescription>
-                      </CardHeader>
-                      {project.image && (
-                          <Image
-                            src={project.image}
-                            alt={project.title}
-                            width={600}
-                            height={400}
-                            className="object-cover aspect-video w-full"
-                            data-ai-hint={project.image.imageHint}
-                          />
-                        )}
-                      <CardContent className="flex-grow pt-6">
-                        <CardTitle className="font-headline text-2xl">
-                          <a target='_blank' href={project.url}>
-                            {project.title}
-                          </a>
-                          </CardTitle>
-                        <p className="text-sm text-muted-foreground mt-2">{project.description}</p>
-                      </CardContent>
-                       <CardFooter className="flex flex-wrap gap-2">
-                        {project.tags.map(tag => <Badge key={tag} variant="secondary" className="font-code">{tag}</Badge>)}
-                      </CardFooter>
-                    </Card>
+        <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 sm:grid-cols-1 md:grid-cols-2">
+          {openSourceProjects.map((project, index) => (
+            <Card key={index} className="h-full bg-[#1a202c] border-gray-800 flex flex-col">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  {project.icon}
+                  <div className="flex items-center gap-2">
+                    {project.links.map((link, linkIndex) => {
+                      if (link.type === 'github') {
+                        return <Link key={linkIndex} href={link.url} target="_blank" rel="noopener noreferrer"><Github size={28} className="text-gray-400 hover:text-white" /></Link>
+                      }
+                      return null;
+                    })}
                   </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="hidden md:block">
-              <CarouselPrevious className="absolute -top-16 right-16" />
-              <CarouselNext className="absolute -top-16 right-4" />
-            </div>
-          </Carousel>
+                </div>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <CardTitle className="text-xl font-bold hover:text-primary transition-colors">
+                    <Link href={project.links[0].url} target="_blank" rel="noopener noreferrer">{project.title}</Link>
+                </CardTitle>
+                <CardDescription className="mt-2 text-gray-400">
+                  {project.description}
+                </CardDescription>
+              </CardContent>
+              <div className="p-6 pt-0">
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map(tag => <Badge key={tag} variant="outline" className="border-green-400/50 text-green-400 font-mono">{tag}</Badge>)}
+                </div>
+              </div>
+            </Card>
+          ))}
         </div>
+        
+        {/* Featured Projects */}
+        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <div className="space-y-2">
+            <div className="inline-block rounded-lg bg-gray-800 px-3 py-1 text-sm">
+              Projets Principaux
+            </div>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+              Mes réalisations
+            </h2>
+            <p className="max-w-[900px] text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Voici une sélection de mes projets les plus représentatifs.
+            </p>
+          </div>
+        </div>
+        <div className="mx-auto grid max-w-5xl items-start gap-8 py-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {featuredProjects.map((project, index) => (
+            <Card key={index} className="h-full bg-[#1a202c] border-gray-800 flex flex-col">
+              <CardHeader>
+                <Link href={project.url} target="_blank" rel="noopener noreferrer">
+                  <Image src={project.image} alt={project.title} className="rounded-t-lg" />
+                </Link>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <CardTitle className="text-xl font-bold hover:text-primary transition-colors">
+                  <Link href={project.url} target="_blank" rel="noopener noreferrer">{project.title}</Link>
+                </CardTitle>
+                <p className="text-sm text-gray-400 mt-1">{project.category}</p>
+                <CardDescription className="mt-2 text-gray-400">
+                  {project.description}
+                </CardDescription>
+              </CardContent>
+              <div className="p-6 pt-0">
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map(tag => <Badge key={tag} variant="outline" className="border-blue-400/50 text-blue-400 font-mono">{tag}</Badge>)}
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+
+        
       </div>
     </section>
   );
